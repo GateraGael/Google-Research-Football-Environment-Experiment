@@ -31,7 +31,7 @@ print("Steps: %d Reward: %.2f" % (steps, rew))
 python3 original.py
 ```
 
-Trial #1
+## Trial #1
 ```output_stdout
 Steps: 85 Reward: 0.00
 ```
@@ -39,7 +39,7 @@ Steps: 85 Reward: 0.00
 # December 23rd
 No Changes made to **original.py**
 
-Trial #2
+## Trial #2
 ```output_stdout
 Steps: 25 Reward: 1.00
 ```
@@ -47,8 +47,23 @@ Steps: 25 Reward: 1.00
 So far no conlusions can be made since the second trial had different output than the first without any changes made.
 It only seems that the reward given to the agent is a fuction of the steps taken - less steps actually gives a reward while more given less.
 
-Trial #3
+## Trial #3
 Changed to log directory to the current directory to make it faster to find
-```output_stdout
-Steps: 25 Reward: 1.00
+Added the following (before the env variable declaration):
+
+```python
+import os
+
+log_dir_tutorial = 'tutorial_logs' + '/'
+
+if not os.path.exists(log_dir_tutorial):
+     os.makedirs(log_dir_tutorial)
+# Replaced the logdir='/tmp/football' with logdir=log_dir_tutorial
 ```
+
+```output_stdout
+Step 100 Reward: 0.0000
+Steps: 139 Reward: 0.00
+```
+Notice how after there is a print after the 100th step.
+Also the conclusion made earlier that the more steps taken the reward is less.
