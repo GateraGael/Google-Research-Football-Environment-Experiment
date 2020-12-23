@@ -67,3 +67,22 @@ Steps: 139 Reward: 0.00
 ```
 Notice how after there is a print after the 100th step.
 Also the conclusion made earlier that the more steps taken the reward is less.
+
+## Trial #4
+Changed to print every 5 steps (first if statement in the while loop)
+
+
+```python
+while True:
+  obs, rew, done, info = env.step(env.action_space.sample())
+  steps += 1
+  if steps % 5 == 0:
+    print("Step %d Reward: %f" % (steps, rew))
+```
+
+```output_stdout
+
+
+```
+
+
