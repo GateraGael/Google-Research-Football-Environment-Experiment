@@ -26,6 +26,10 @@ Using the following link: [Tutorial Colab Notebook!](https://colab.research.goog
 Honnestly does not teach much. Not sure it was inteded to teach anything or simply as a quickstart.
 
 
+# December 20th 2020
+Created a directory titled "ColabScripts" where I will be running the above notebook as .py files.
+Please refer to the readme file titled "ColabScripts\_log" for specifics.
+
 
 
 
