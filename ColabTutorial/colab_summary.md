@@ -40,6 +40,8 @@ Steps: 85 Reward: 0.00
 No Changes made to **original.py**
 
 ## Trial #2
+
+#### Output
 ```output_stdout
 Steps: 25 Reward: 1.00
 ```
@@ -61,6 +63,7 @@ if not os.path.exists(log_dir_tutorial):
 # Replaced the logdir='/tmp/football' with logdir=log_dir_tutorial
 ```
 
+#### Output
 ```output_stdout
 Step 100 Reward: 0.0000
 Steps: 139 Reward: 0.00
@@ -80,6 +83,7 @@ while True:
     print("Step %d Reward: %f" % (steps, rew))
 ```
 
+#### Output
 ```output_stdout
 
 
