@@ -24,6 +24,10 @@ while True:
 print("Steps: %d Reward: %.2f" % (steps, rew))
 ```
 
+The most notable argument here is the env_name.
+It is set to "academy_empty_goal_close". 
+
+It is not rendered by default since the colab notebook will.
 
 # December 20th 
 
@@ -110,7 +114,19 @@ Step 110 Reward: 0.000000
 Step 115 Reward: 0.000000
 Step 120 Reward: 0.000000
 Steps: 121 Reward: 0.00
-
 ```
+
+As we can see my assumptions are completely wrong so far therefore will need more experimentation to understand what is behind the increase/ decrease in rewards.
+In other words, what causes the agents to be rewarded/ re-enforced.
+
+## Trial #5
+Made major changes to the original file.
+First and foremost I wanted to render to game in order to see what was going on.
+Also added a function that takes screenshots using pyautogui's _.screenshot_ function
+Full Doc at Link: [pyautogui-screenshot function](https://pyautogui.readthedocs.io/en/latest/screenshot.html)
+
+Lastly Started writing the output on a csv file including printing to console.
+
+From what I am seeing is that after rendering the game is that the player takes a random action and it either goes forward into the goal **resulting in a reward of 1** or backwards and gets the ball taken away by defenders **resulting in a reward of 0**. The number of steps simply depends on how detremental the first action/ direction the player took until the player gets the ball taken away or scores.
 
 
