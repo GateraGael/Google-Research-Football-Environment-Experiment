@@ -85,7 +85,31 @@ while True:
 
 #### Output
 ```output_stdout
-
+Step 5 Reward: 0.000000
+Step 10 Reward: 0.000000
+Step 15 Reward: 0.000000
+Step 20 Reward: 0.000000
+Step 25 Reward: 0.000000
+Step 30 Reward: 0.000000
+Step 35 Reward: 0.000000
+Step 40 Reward: 0.000000
+Step 45 Reward: 0.000000
+Step 50 Reward: 0.000000
+Step 55 Reward: 0.000000
+Step 60 Reward: 0.000000
+Step 65 Reward: 0.000000
+Step 70 Reward: 0.000000
+Step 75 Reward: 0.000000
+Step 80 Reward: 0.000000
+Step 85 Reward: 0.000000
+Step 90 Reward: 0.000000
+Step 95 Reward: 0.000000
+Step 100 Reward: 0.000000
+Step 105 Reward: 0.000000
+Step 110 Reward: 0.000000
+Step 115 Reward: 0.000000
+Step 120 Reward: 0.000000
+Steps: 121 Reward: 0.00
 
 ```
 
