@@ -173,16 +173,80 @@ In order to see which actions are available I did the following:
 print(env.action_space)
 ``` 
 and the following was the output:
-
 ```output_stdout
 Discrete(19)
 ```
-While running the following command
+This means that the agent can take 19 possible actions in the game. 
+
+While running the following command:
 ```python 
 print(env.action_space.sample())
 ``` 
-and the following was the output:
 
+and the following was the output:
 ```output_stdout
 4
 ```
+This means at that particular run, the random sample gave the 4th action in the list.
+
+## Trial #8
+
+I was really intrigued as to which actions correspond to which integer from the list of 19.
+Therefore thought of a way to hard code the actions, even though it defeats the purpose of RL simply to get an understanding of the football engine.
+Using the following command, I was able to see all possible attributes fo teh _sction\_space_ method.
+
+```python
+print(dir(env.action_space))
+```
+
+and had the following was the output:
+```output_stdout
+['__class__', '__contains__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_np_random', 'contains', 'dtype', 'from_jsonable', 'n', 'np_random', 'sample', 'seed', 'shape', 'to_jsonable']
+```
+
+From the available attributes I thought using _np\_random_ would work so I can specify a range of ints to be used as actions.
+Therefore used the following command in order to see which action corresponds to 0.
+```python
+print(env.action_space.np_random(0,1))
+```
+
+Resulted in the following error
+```output_stdout
+Traceback (most recent call last):
+  File "original_trial8.py", line 28, in <module>
+    print(env.action_space.np_random(0,1))
+TypeError: 'numpy.random.mtrand.RandomState' object is not callable
+```
+
+Therefore decised to look up the documentation for the _numpy.random.mtrand.RandomState_
+The first suggestion from the google search was to use the _.choice()_ method. 
+The official documentation can found at the following link:  [numpy.random.mtrand.RandomState.choice](https://docs.scipy.org/doc/numpy-1.17.0/reference/random/generated/numpy.random.mtrand.RandomState.choice.html)
+
+Ran the following command:
+
+```python
+print(env.action_space.np_random.choice(1,1))
+sys.exit()
+```
+With an output of :
+```output_stdout
+[0]
+```
+The results of the code implementation and screenshots can be see in the [trial8_logs](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/tree/main/ColabTutorial/trial8_logs) folder.
+
+It can be confirmed that the action *0* corresponds to no action at all. Giving time to the oppostion to actually pick up the ball and throw it out for a corner kick which is very weird !
+
+[Opponent Pick Up Ball With Hands](screenshots/15m49.png)
+
+Did not get a chance to take the screenshot of when the player named Meitner throws the ball away. But believe me he does you have my code in this repo.
+Just realized the naming convention for the screenshots are not what I wanted so will change the take_screenshot script.
+
+## Trial #9
+
+Since the documentation states that RandomState.choice(a, size=None, replace=True, p=None)
+Generates a random sample from a given 1-D array
+
+Parameters:	
+a : 1-D array-like or int
+
+
