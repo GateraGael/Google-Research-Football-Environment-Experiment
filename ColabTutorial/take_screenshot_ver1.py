@@ -1,10 +1,8 @@
 import pyautogui
-import datetime
 
 def take_amount_screenshots(num_screenshots, step_num, output_path):
-    Minutes_Seconds_Now = datetime.datetime.now().strftime('%Mm%S')
     for i in range(num_screenshots):
         #savesceenshot directly to disk
-        pyautogui.screenshot(output_path + Minutes_Seconds_Now + ".png")
+        pyautogui.screenshot(output_path+f"{str(step_num)}"+f"{i}"+".png")
         i += 1
 
