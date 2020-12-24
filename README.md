@@ -7,6 +7,8 @@ Having had the chance to actually play the sport at a semi-professional level ma
 Created a function that takes screenshots from that used pyautogui's _.screenshot_
 Full Doc at Link: [pyautogui-screenshot function](https://pyautogui.readthedocs.io/en/latest/screenshot.html)
 
+**NOTE** Had not read the published paper linked here: [Google Research Football: A Novel Reinforcement Learning Environment](https://arxiv.org/pdf/1907.11180.pdf). Until December 24th.
+
 # December 15th 2020
 Had to install Google Football on my linux (ubuntu 20.04) machine as the windows installation was giving me some issues
 Even with linux installation I ran into an error "No SETUP file exists" after following the step-by-step instructions in the main
@@ -109,6 +111,15 @@ pygame.error: No available video device
 Therefore it is more of a rendering issue than anything.
 Note: Have not found the solution to this problem yet as of December 23rd (morning).
 
+
+# December 24th 2020
+After yesterday's 5 different trials with the tutorial to get a reward, none of them actually had a reward.
+Please see folder [Colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) file for an overview of my trials.
+
+Started Reading the actual paper in order to get better insight into the environments, actions and other variables to be taken.
+
+Page 4 explains that the football engine rewards the team or agent when a goal is scored (+1) and rewards a (-1) when a goal is scored against.
+Therefore only my Trial #2 successfully scored a goal while all the other attemps had the ball taken away.
 
 
 

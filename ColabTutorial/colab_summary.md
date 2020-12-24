@@ -129,4 +129,60 @@ Lastly Started writing the output on a csv file including printing to console.
 
 From what I am seeing is that after rendering the game is that the player takes a random action and it either goes forward into the goal **resulting in a reward of 1** or backwards and gets the ball taken away by defenders **resulting in a reward of 0**. The number of steps simply depends on how detremental the first action/ direction the player took until the player gets the ball taken away or scores.
 
+Note: Will have to edit the file in order to have a better naming convention for the screenshots. I think this is a typical linux problem.
 
+## Trial #6
+The fist changes that I made to code for trial_5 is that instead of naming the screenshots per number I simply imported the time module and will name each by minute:seconds after the script started running. These changes were made in the _take\_screenshot.py_ script.
+
+As I looked at the script, I saw that un-used variables obs and info and wondered what they represent.
+Therefore also printed them to the terminal and csv file just to see.
+
+Results: The observation looks a 3D numpy array. Will just print the shape for the next trial and maybe have it in it's own csv file.
+
+## Trial #7 
+First I printed the shape of the array and it was:
+```output_stdout
+(72, 96, 4)
+```
+I Just won't output it not put it into it's own csv file until I know what it is.
+
+## Trial #8
+
+Page 4 of the paper linked here: [Google Research Football: A Novel Reinforcement Learning Environment](https://arxiv.org/pdf/1907.11180.pdf)
+
+Showed all of the action sets that the agents take.
+
+| Table 1: Action Set |             |             |              |
+|---------------------|-------------|-------------|--------------|
+| Top                 | Bottom      | Left        | Right        |
+| Top-Left            | Top-Right   | Bottom-Left | Bottom-Right |
+| Short Pass          | High Pass   | Long Pass   | Shot         |
+| Do-Nothing          | Sliding     | Dribble     | Stop-Dribble |
+| Sprint              | Stop-moving | Stop-Sprint |              |
+
+Taking a look at the following chunck of code in the script: 
+```python 
+While True:
+  obs, rew, done, info = env.step(env.action_space.sample())
+``` 
+
+We can see the .sample() method meaning that the bot takes a sample from a pre defined action space.
+
+In order to see which actions are available I did the following:
+```python 
+print(env.action_space)
+``` 
+and the following was the output:
+
+```output_stdout
+Discrete(19)
+```
+While running the following command
+```python 
+print(env.action_space.sample())
+``` 
+and the following was the output:
+
+```output_stdout
+4
+```
