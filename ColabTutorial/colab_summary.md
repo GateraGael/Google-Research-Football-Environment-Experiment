@@ -236,7 +236,7 @@ The results of the code implementation and screenshots can be see in the [trial8
 
 It can be confirmed that the action *0* corresponds to no action at all. Giving time to the oppostion to actually pick up the ball and throw it out for a corner kick which is very weird !
 
-[Opponent Pick Up Ball With Hands](screenshots/15m49.png)
+![](screenshots/15m49.png)
 
 Did not get a chance to take the screenshot of when the player named Meitner throws the ball away. But believe me he does you have my code in this repo.
 Just realized the naming convention for the screenshots are not what I wanted so will change the take_screenshot script.
