@@ -8,7 +8,7 @@ steps = 0
 while True:
     obs, rew, done, info = env.step(env.action_space.sample())
     steps += 1
-    if steps % 100 == 0:
+    if steps % 5 == 0:
         print("Step %d Reward: %f" %(steps, rew))
     if done:
         break

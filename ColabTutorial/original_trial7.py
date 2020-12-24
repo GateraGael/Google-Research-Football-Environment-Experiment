@@ -1,7 +1,7 @@
 import gfootball.env as football_env
 import os
 import take_screenshot
-
+import sys
 
 log_dir_tutorial = 'tutorial_logs' + '/'
 number_of_screenshots = 1
@@ -26,14 +26,14 @@ while True:
     obs, rew, done, info = env.step(env.action_space.sample())
     steps += 1
     if steps % 10 == 0:
-        StepsVreward_log.append(f"{steps}, {rew} \n")
-        print("Step %d Reward: %f" %(steps, rew))
+        StepsVreward_log.append(f"{steps}, {rew}, {done}, {info} \n")
+        print("Step: %d Reward: %f Done: %s Info: %s" %(steps, rew, done, info))
         take_screenshot.take_amount_screenshots(number_of_screenshots, steps, screenshots_dir)
     if done:
         break
 
-print("Steps: %d Reward: %.2f" % (steps, rew))
-StepsVreward_log.append(f"{steps}, {rew} \n")
+print("Steps: %d Reward: %.2f Done: %s Info: %s" % (steps, rew, done, info))
+StepsVreward_log.append(f"{steps}, {rew}, {done}, {info} \n")
 
 with open(log_dir_tutorial + "TrainStepsvsReward.csv", "w") as log_file:
     log_file.writelines(StepsVreward_log)
