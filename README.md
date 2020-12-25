@@ -1,6 +1,6 @@
 # Google-Research-Football-Environment-Experiment
 
-[<img src="https://images.app.goo.gl/ZRAzajAccMrWeZsb7">](https://ai.google/research/)
+[<img src="https://images.app.goo.gl/ZRAzajAccMrWeZsb7">](https://images.app.goo.gl/ZRAzajAccMrWeZsb7)
 
 
 In this repository, I will be Experimenting with Google Research Football Environment.
