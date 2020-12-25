@@ -1,6 +1,11 @@
 # Google-Research-Football-Environment-Experiment
 
-![<img src="https://images.app.goo.gl/ZRAzajAccMrWeZsb7">]('r https://images.app.goo.gl/ZRAzajAccMrWeZsb7')
+```{r, echo=FALSE}
+# Define variable containing url
+url <- "http://www.online-image-editor.com//styles/2014/images/example_image.png"
+```
+
+![]('https://www.androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?src=https%3A%2F%2Fwww.androidpolice.com%2Fwp-content%2Fuploads%2F2018%2F05%2Fgoogle-ai-hero.png')
 
 #![]('r https://images.app.goo.gl/ZRAzajAccMrWeZsb7')
 
