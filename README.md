@@ -125,6 +125,9 @@ Started Reading the actual paper in order to get better insight into the environ
 Page 4 explains that the football engine rewards the team or agent when a goal is scored (+1) and rewards a (-1) when a goal is scored against.
 Therefore only my Trial #2 successfully scored a goal while all the other attemps had the ball taken away.
 
+At Trial #10 I was able to make our agent Alan Turing dribble directly into the goal.
+Unfortunately no A.I. yet, simply needed to do this to get an understanding of the football engine.
 
+![](trial10_logs/screenshots/00m40s.png)
 
 
