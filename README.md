@@ -128,6 +128,6 @@ Therefore only my Trial #2 successfully scored a goal while all the other attemp
 At Trial #10 I was able to make our agent Alan Turing dribble directly into the goal.
 Unfortunately no A.I. yet, simply needed to do this to get an understanding of the football engine.
 
-![](trial10_logs/screenshots/00m40s.png)
+![](ColabTutorial/trial10_logs/screenshots/00m40s.png)
 
 
