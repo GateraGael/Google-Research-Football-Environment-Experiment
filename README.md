@@ -1,13 +1,7 @@
 # Google-Research-Football-Environment-Experiment
 
-```{r, echo=FALSE}
-# Define variable containing url
-url <- "http://www.online-image-editor.com//styles/2014/images/example_image.png"
-```
+![](https://www.androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?src=https%3A%2F%2Fwww.androidpolice.com%2Fwp-content%2Fuploads%2F2018%2F05%2Fgoogle-ai-hero.png)
 
-![]('https://www.androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?src=https%3A%2F%2Fwww.androidpolice.com%2Fwp-content%2Fuploads%2F2018%2F05%2Fgoogle-ai-hero.png')
-
-#![]('r https://images.app.goo.gl/ZRAzajAccMrWeZsb7')
 
 In this repository, I will be Experimenting with Google Research Football Environment.
 Football has been a passion of mine since I can remember, it is fantastic that I can use a passion of mine to continue learning about my field of study.
