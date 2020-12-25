@@ -249,4 +249,29 @@ Generates a random sample from a given 1-D array
 Parameters:	
 a : 1-D array-like or int
 
+I made the following changes to the while statement so I can control exactly which actions the agent is taking.
 
+```python
+while True:
+    action_num = [1]
+
+    obs, rew, done, info = env.step(env.action_space.np_random.choice(action_num,1))
+```
+
+The result was the agent going the complete other direction in a straight line and getting his ball taken away.
+
+![](trial9_logs/screenshots/00m44s.png)
+
+Complete code for the take_screenshot file just for the record.
+
+```python
+import pyautogui
+import datetime
+
+def take_amount_screenshots(num_screenshots, step_num, output_path):
+    Minutes_Seconds_Now = datetime.datetime.now().strftime('%Mm%S')
+    for i in range(num_screenshots):
+        #savesceenshot directly to disk
+        pyautogui.screenshot(output_path + Minutes_Seconds_Now + ".png")
+        i += 1
+```
