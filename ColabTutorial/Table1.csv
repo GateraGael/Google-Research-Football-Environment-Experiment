@@ -1,0 +1,6 @@
+Table 1: Action Set,,,
+Top,Bottom,Left,Right
+Top-Left,Top-Right,Bottom-Left,Bottom-Right
+Short Pass,High Pass,Long Pass,Shot
+Do-Nothing,Sliding,Dribble,Stop-Dribble
+Sprint,Stop-moving,Stop-Sprint,
