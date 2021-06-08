@@ -149,3 +149,18 @@ docker build --build-arg DOCKER_BASE=tensorflow/tensorflow:1.15.2-gpu-py3 . -t g
 ```console
 docker build --build-arg DOCKER_BASE=ubuntu:20.04 . -t gfootball_nogpu
 ```
+
+Using the gpu version gave me the following warning
+
+```console
+WARNING: You are running this container as root, which can cause new files in
+mounted volumes to be created as the root user on your host machine.
+
+To avoid this, run the container by specifying your user's userid:
+
+$ docker run -u $(id -u):$(id -g) args
+
+```
+
+
+
