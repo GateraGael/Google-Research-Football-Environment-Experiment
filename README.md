@@ -132,4 +132,12 @@ Unfortunately no A.I. yet, simply needed to do this to get an understanding of t
 
 ![](ColabTutorial/trial10_logs/screenshots/00m40s.png)
 
+# June 7th 2021
+Wanted to work on this again, I think the fast that it was during the holiday season and had a lot going on distracted me from the project.
+Also installed Ubuntu 20.04 on an SSD from which I could boot from on my regular computer which happens to have a gpu.
+Therefore re-installed the docker with the following command.
+
+```bash
+docker build --build-arg DOCKER_BASE=tensorflow/tensorflow:1.15.2-gpu-py3 . -t gfootball
+```
 
