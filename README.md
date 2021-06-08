@@ -28,6 +28,8 @@ python3 -m gfootball.play_game --action_set=full
 ```
 Indeed worked well but I had fears of version issues. I googled the previously indicated 'No SETUP file exists' and it had to do with pygame not working well with python3 versions other than 3.6. Therefore deleted my initial installation and went with the docker installation in a virtual environment instead and everything is working fine.
 
+**Instructions on how to install with docker linked here:** [Google Research Football Docker Image](https://github.com/google-research/football/blob/master/gfootball/doc/docker.md).
+
 # December 19th 2020
 Now begins the real experiments with the Google Research Football!
 
