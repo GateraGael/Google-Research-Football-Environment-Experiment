@@ -11,7 +11,7 @@ Having had the chance to actually play the sport at a semi-professional level ma
 Created a function that takes screenshots from that used pyautogui's _.screenshot_
 Full Doc at Link: [pyautogui-screenshot function](https://pyautogui.readthedocs.io/en/latest/screenshot.html)
 
-**NOTE** Had not read the published paper linked here: [Google Research Football: A Novel Reinforcement Learning Environment](https://arxiv.org/pdf/1907.11180.pdf). Until December 24th.
+Published paper linked here: [Google Research Football: A Novel Reinforcement Learning Environment](https://arxiv.org/pdf/1907.11180.pdf).
 
 # December 15th 2020
 Had to install Google Football on my linux (ubuntu 20.04) machine as the windows installation was giving me some issues
