@@ -147,5 +147,5 @@ docker build --build-arg DOCKER_BASE=tensorflow/tensorflow:1.15.2-gpu-py3 . -t g
 ### Non GPU installation
 
 ```console
-docker build --build-arg DOCKER_BASE=ubuntu:20.04 . -t gfootball
+docker build --build-arg DOCKER_BASE=ubuntu:20.04 . -t gfootball_nogpu
 ```
