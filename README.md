@@ -136,8 +136,16 @@ Unfortunately no A.I. yet, simply needed to do this to get an understanding of t
 Wanted to work on this again, I think the fast that it was during the holiday season and had a lot going on distracted me from the project.
 Also installed Ubuntu 20.04 on an SSD from which I could boot from on my regular computer which happens to have a gpu.
 Therefore re-installed the docker with the following command.
+so my default installation will have a tensorflow base and called **gfootball** while the non-gpu version will
 
-```bash
+### GPU Installation
+
+```console
 docker build --build-arg DOCKER_BASE=tensorflow/tensorflow:1.15.2-gpu-py3 . -t gfootball
 ```
 
+### Non GPU installation
+
+```console
+docker build --build-arg DOCKER_BASE=ubuntu:20.04 . -t gfootball
+```
