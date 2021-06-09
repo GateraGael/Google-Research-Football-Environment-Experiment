@@ -6,7 +6,7 @@
 
 # Table of contents
 1. [Introduction](#introduction)
-    1. [Sub paragraph](#Installation)
+    1. [Installation](#Installation)
 <!--
 see how to make table of contents in markdown: https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents
 
@@ -28,7 +28,7 @@ Full Doc at Link: [pyautogui-screenshot function](https://pyautogui.readthedocs.
 Published paper linked here: [Google Research Football: A Novel Reinforcement Learning Environment](https://arxiv.org/pdf/1907.11180.pdf).
 
 
-### Sub paragraph <a name="Installation"></a>
+### Installation <a name="Installation"></a>
 This is a sub paragraph, formatted in heading 3 style
 
 
