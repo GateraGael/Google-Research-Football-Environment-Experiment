@@ -7,7 +7,7 @@
 # Table of contents
 1. [Introduction](#introduction)
     1. [Installation](#Installation)
-    2. [ColabQuickStart](#ColabQuickStart)
+    2. [Test with Colab Notebook](#Test with Colab Notebook)
 <!--
 see how to make table of contents in markdown: https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents
 
@@ -32,7 +32,7 @@ Published paper linked here: [Google Research Football: A Novel Reinforcement Le
 ### Installation <a name="Installation"></a>
 After struggling with the different installation instructions. The docker image with gpu support and tensorflow base was by far the best and that actually rendered the game.
 
-### Colab Quick Start<a name="Colab Quick Start"></a>
+### Test with Colab Notebook<a name="Test with Colab Notebook"></a>
 
 Using the following link: [Tutorial Colab Notebook!](https://colab.research.google.com/github/google-research/football/blob/master/gfootball/colabs/gfootball_example_from_prebuild.ipynb) 
 Honnestly does not teach much. Not sure it was inteded to teach anything or simply as a quickstart.Created a directory titled "ColabTutorial" where I will be running the above notebook as .py files. Please refer to the readme file titled "Colab_summary.md" hyperlinked: [Colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) in which I basically logged all my trials.
