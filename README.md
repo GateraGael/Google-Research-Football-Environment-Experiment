@@ -7,7 +7,7 @@
 # Table of contents
 1. [Introduction](#introduction)
     1. [Installation](#Installation)
-    2. [ColabTutorialNotebook](#Test with Colab Notebook)
+    2. [Colab Tutorial Notebook](#ColabNotebook)
 <!--
 see how to make table of contents in markdown: https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents
 
@@ -29,7 +29,7 @@ Full Doc at Link: [pyautogui-screenshot function](https://pyautogui.readthedocs.
 Published paper linked here: [Google Research Football: A Novel Reinforcement Learning Environment](https://arxiv.org/pdf/1907.11180.pdf).
 
 
-### Installation <a name="Installation"></a>
+### Installation <a name="ColabNotebook"></a>
 After struggling with the different installation instructions. The docker image with gpu support and tensorflow base was by far the best and that actually rendered the game.
 
 ### Test with Colab Notebook<a name="Test with Colab Notebook"></a>
