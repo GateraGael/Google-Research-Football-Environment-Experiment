@@ -66,7 +66,7 @@ Honnestly does not teach much. Not sure it was inteded to teach anything or simp
 
 # December 20th 2020
 Created a directory titled "ColabScripts" where I will be running the above notebook as .py files.
-Please refer to the readme file titled "Ccolab_summary.md" hyperlinked: [Colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) for specifics.
+Please refer to the readme file titled "Colab_summary.md" hyperlinked: [Colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) for specifics.
 
 
 # December 24th 2020
