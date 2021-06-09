@@ -54,7 +54,7 @@ The second paragraph text
 After Decmber 23rd different trials with the tutorial to get a reward, none of them actually had a reward.
 Please see folder [Colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) file for an overview of my trials.
 
-Started Reading the actual paper in order to get better insight into the environments, actions and other variables to be taken.
+Started Reading the actual paper in order to get better insight into the environments, variables and actions the agents take.
 
 Page 4 of the resarch paper explains that the football engine rewards the team or agent when a goal is scored (+1) and rewards a (-1) when a goal is scored against. Therefore only my Trial #2 successfully scored a goal while all the other attemps had the ball taken away.
 At Trial #10 I was able to make our agent Alan Turing dribble directly into the goal.
