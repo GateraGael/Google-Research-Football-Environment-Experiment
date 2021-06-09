@@ -7,6 +7,7 @@
 # Table of contents
 1. [Introduction](#introduction)
     1. [Installation](#Installation)
+    2. [ColabQuickStart](#ColabQuickStart)
 <!--
 see how to make table of contents in markdown: https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents
 
@@ -31,6 +32,11 @@ Published paper linked here: [Google Research Football: A Novel Reinforcement Le
 ### Installation <a name="Installation"></a>
 After struggling with the different installation instructions. The docker image with gpu support and tensorflow base was by far the best and that actually rendered the game.
 
+### Colab Quick Start<a name="Colab Quick Start"></a>
+
+Using the following link: [Tutorial Colab Notebook!](https://colab.research.google.com/github/google-research/football/blob/master/gfootball/colabs/gfootball_example_from_prebuild.ipynb) 
+Honnestly does not teach much. Not sure it was inteded to teach anything or simply as a quickstart.
+
 <!--
 ## Some paragraph <a name="paragraph1"></a>
 The first paragraph text
@@ -42,13 +48,6 @@ This is a sub paragraph, formatted in heading 3 style
 The second paragraph text
 
 -->
-
-
-# December 19th 2020
-Now begins the real experiments with the Google Research Football!
-
-Using the following link: [Tutorial Colab Notebook!](https://colab.research.google.com/github/google-research/football/blob/master/gfootball/colabs/gfootball_example_from_prebuild.ipynb) 
-Honnestly does not teach much. Not sure it was inteded to teach anything or simply as a quickstart.
 
 
 # December 20th 2020
