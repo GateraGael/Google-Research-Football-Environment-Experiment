@@ -3,6 +3,20 @@
 ![](https://www.androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?src=https%3A%2F%2Fwww.androidpolice.com%2Fwp-content%2Fuploads%2F2018%2F05%2Fgoogle-ai-hero.png&w=728)
 
 
+
+# Table of contents
+1. [Introduction](#introduction)
+
+<!--
+see how to make table of contents in markdown: https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents
+
+
+2. [Some paragraph](#paragraph1)
+    1. [Sub paragraph](#subparagraph1)
+3. [Another paragraph](#paragraph2)
+-->
+## Introduction <a name="introduction"></a>
+
 In this repository, I will be Experimenting with Google Research Football Environment.
 Football has been a passion of mine since I can remember, it is fantastic that I can use a passion of mine to continue learning about my field of study.
 
@@ -12,6 +26,19 @@ Created a function that takes screenshots from that used pyautogui's _.screensho
 Full Doc at Link: [pyautogui-screenshot function](https://pyautogui.readthedocs.io/en/latest/screenshot.html)
 
 Published paper linked here: [Google Research Football: A Novel Reinforcement Learning Environment](https://arxiv.org/pdf/1907.11180.pdf).
+
+
+<!--
+## Some paragraph <a name="paragraph1"></a>
+The first paragraph text
+
+### Sub paragraph <a name="subparagraph1"></a>
+This is a sub paragraph, formatted in heading 3 style
+
+## Another paragraph <a name="paragraph2"></a>
+The second paragraph text
+
+-->
 
 # December 15th 2020
 Had to install Google Football on my linux (ubuntu 20.04) machine as the windows installation was giving me some issues
