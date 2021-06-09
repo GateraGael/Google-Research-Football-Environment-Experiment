@@ -19,7 +19,7 @@ Once I was in the container I still had to run the setup.py
 python3 setup.py install
 ```
 
-## Docker Instructions
+## Managing Containers
 In order to quit the container simply run the exit command
 Type in the following command to see the container ID
 
@@ -52,6 +52,8 @@ Make sure to go into the same container as a new container will be completely bl
 ```console
 sudo docker start [conainter_id] -i
 ```
+
+## File Management
 
 **Copy Files from host to container**
 ```console
