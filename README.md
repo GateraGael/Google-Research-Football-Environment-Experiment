@@ -7,7 +7,7 @@
 # Table of contents
 1. [Introduction](#introduction)
     1. [Installation](#Installation)
-    2. [Colab Tutorial Notebook](#ColabNotebook)
+    2. [Test with Colab Notebook](#ColabNotebook)
 <!--
 see how to make table of contents in markdown: https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents
 
