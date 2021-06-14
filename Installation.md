@@ -29,10 +29,10 @@ My default installation will have a tensorflow base and called **gfootball** whi
 docker build --build-arg DOCKER_BASE=tensorflow/tensorflow:1.15.2-gpu-py3 . -t gfootball
 ```
 
-### Non GPU installation
+## Docker run
 
 ```console
-docker build --build-arg DOCKER_BASE=ubuntu:20.04 . -t gfootball_nogpu
+sudo docker run --device /dev/dri/card0 --device /dev/dri/renderD128 -e DISPLAY=$DISPLAY -it -v /tmp/.X11-unix:/tmp/.X11-unix:rw gfootball bash
 ```
 
 Using the gpu version gave me the following warning
@@ -46,3 +46,11 @@ To avoid this, run the container by specifying your user's userid:
 $ docker run -u $(id -u):$(id -g) args
 
 ```
+
+
+### Non GPU installation
+
+```console
+docker build --build-arg DOCKER_BASE=ubuntu:20.04 . -t gfootball_nogpu
+```
+
