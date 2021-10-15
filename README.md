@@ -36,8 +36,7 @@ After struggling with the different installation instructions. The docker image 
 **Instructions on how to install with docker linked here:** [Google Research Football Docker Image](https://github.com/google-research/football/blob/master/gfootball/doc/docker.md).
 
 
-[My Own Installations hyperlinked here](./installation.md)
-
+[My Own Installations hyperlinked here](./Installation.md)
 
 ### Test with Colab Notebook<a name="Test with Colab Notebook"></a>
 
