@@ -29,7 +29,7 @@ Full Doc at Link: [pyautogui-screenshot function](https://pyautogui.readthedocs.
 Published paper linked here: [Google Research Football: A Novel Reinforcement Learning Environment](https://arxiv.org/pdf/1907.11180.pdf).
 
 
-### Installation <a name="ColabNotebook"></a>
+### Installation <a name="Installation"></a>
 After struggling with the different installation instructions. The docker image with gpu support and tensorflow base was by far the best and that actually rendered the game.
 
 
