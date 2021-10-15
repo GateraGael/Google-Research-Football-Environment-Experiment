@@ -38,7 +38,7 @@ After struggling with the different installation instructions. The docker image 
 
 [My Own Installations hyperlinked here](./Installation.md)
 
-### Test with Colab Notebook<a name="Test with Colab Notebook"></a>
+### Test with Colab Notebook<a name="ColabNotebook"></a>
 
 Using the following link: [Tutorial Colab Notebook!](https://colab.research.google.com/github/google-research/football/blob/master/gfootball/colabs/gfootball_example_from_prebuild.ipynb) 
 Honnestly does not teach much. Not sure it was inteded to teach anything or simply as a quickstart. Created a directory titled "ColabTutorial" where I will be running the above notebook as .py files. Please refer to the readme file titled "Colab_summary.md" hyperlinked: [Colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) in which I basically logged all my trials.
