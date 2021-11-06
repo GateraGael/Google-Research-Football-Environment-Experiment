@@ -16,9 +16,14 @@ Indeed worked well but I had fears of version issues. I googled the previously i
 
 **Instructions on how to install with docker linked here:** [Google Research Football Docker Image](https://github.com/google-research/football/blob/master/gfootball/doc/docker.md).
 
+### Used the Non GPU installation
+
+```console
+docker build --build-arg DOCKER_BASE=ubuntu:20.04 . -t gfootball_nogpu
+```
 
 # June 7th 2021
-Wanted to work on this again, I think the fast that it was during the holiday season and had a lot going on distracted me from the project.
+Wanted to work on this again, I think the fact that it was during the holiday season and had a lot going on distracted me from the project.
 Also installed Ubuntu 20.04 on an SSD from which I could boot from on my regular computer which happens to have a gpu.
 Therefore re-installed the docker with the following command.
 My default installation will have a tensorflow base and called **gfootball** while the non-gpu version will be called **gfootball_nogpu**.
@@ -46,11 +51,3 @@ To avoid this, run the container by specifying your user's userid:
 $ docker run -u $(id -u):$(id -g) args
 
 ```
-
-
-### Non GPU installation
-
-```console
-docker build --build-arg DOCKER_BASE=ubuntu:20.04 . -t gfootball_nogpu
-```
-
