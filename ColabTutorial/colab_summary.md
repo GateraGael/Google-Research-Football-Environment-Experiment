@@ -71,8 +71,9 @@ if not os.path.exists(log_dir_tutorial):
 Step 100 Reward: 0.0000
 Steps: 139 Reward: 0.00
 ```
+
 Notice how after there is a print after the 100th step.
-Also the conclusion made earlier that the more steps taken the reward is less.
+Also the conclusion made earlier that the more steps taken the reward is less still holds.
 
 ## Trial #4
 Changed to print every 5 steps (first if statement in the while loop)
