@@ -3,7 +3,8 @@ Experimenting with the given quick start colab notebook, changed the format to .
 
 ## Original.py
 The first file that I used is called **original.py**
-This file is the first and only cell in the sample notebook after the installation cell ran without any changes at all.
+This file is the first and only cell in the sample notebook after the installation cell.
+I ran without any changes at all.
 
 Full Script Below:
 
