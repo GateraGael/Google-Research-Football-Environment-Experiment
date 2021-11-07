@@ -24,8 +24,8 @@ while True:
 print("Steps: %d Reward: %.2f" % (steps, rew))
 ```
 
-The most notable argument here is the env_name, it is set to "academy_empty_goal_close". 
-It is not rendered by default since the quick start colab notebook does not will not.
+The most notable argument here is the env_name, it is set to "academy_empty_goal_close".
+The pygame GUI does is not rendered by default since the quick start colab notebook does not will not.
 
 # December 20th 
 
