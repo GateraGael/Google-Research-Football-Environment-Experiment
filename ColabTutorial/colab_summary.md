@@ -49,7 +49,8 @@ Steps: 25 Reward: 1.00
 ```
 
 So far no conlusions can be made since the second trial had different output than the first without any changes made.
-It only seems that the reward given to the agent is a fuction of the steps taken - less steps actually gives a reward while more given less.
+It only seems that rewards are given to the agent are a fuction of the steps taken - less steps actually gives a reward while more given less.
+(Probably the wrong conclusion). Most likely just means the agent was able to score quickly and if it takes a while, then most likely a defender was able to get to take the ball away.
 
 ## Trial #3
 Changed to log directory to the current directory to make it faster to find
