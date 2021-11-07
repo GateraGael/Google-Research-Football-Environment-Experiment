@@ -19,7 +19,7 @@ Indeed worked well but I had fears of version issues. I googled the previously i
 ### Used the Non GPU installation
 
 ```console
-docker build --build-arg DOCKER_BASE=ubuntu:20.04 . -t gfootball_nogpu
+docker build --build-arg DOCKER_BASE=ubuntu:20.04 . -t gfootball
 ```
 
 # June 7th 2021
