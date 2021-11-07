@@ -1,6 +1,5 @@
 # December 20th
-Experimenting with quick start colab notebook.
-Format is .py files instead of .ipynb files
+Experimenting with the given quick start colab notebook, changed the format to .py files instead of .ipynb files for easier testing.
 
 ## Original.py
 The first file that I used is called **original.py**
