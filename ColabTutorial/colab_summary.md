@@ -281,10 +281,11 @@ def take_amount_screenshots(num_screenshots, step_num, output_path):
 
 ## Trial #10
 
-This is the latest trial of the Colab Tutoria for now as by now it is very very far away from being the original file.
-Will create other directories with desciptive log such as this one as I experiment.
+This is the last trial I will be attempting with the started Colab Notebook. Because by now it is very very far away from being the original file.
+I will be creating other directories with desciptive log such as this one as I run various experiments.
 
-So action 5 is the action that makes Alan Turing dribble directly into the goal.
+## NOtes
+Action 5 is the action that makes Alan Turing dribble directly into the goal.
 
 ```python
 action_num = [5]
