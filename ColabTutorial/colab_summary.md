@@ -75,6 +75,8 @@ Steps: 139 Reward: 0.00
 Notice how after there is a print after the 100th step.
 Also the conclusion made earlier that the more steps taken the reward is less still holds.
 
+# December 24th
+
 ## Trial #4
 Changed to print every 5 steps (first if statement in the while loop)
 
@@ -189,7 +191,7 @@ and the following was the output:
 ```
 This means at that particular run, the random sample gave the 4th action in the list.
 
-## Trial #8
+## Trial #8 (Part 2)
 
 I was really intrigued as to which actions correspond to which integer from the list of 19.
 Therefore thought of a way to hard code the actions, even though it defeats the purpose of RL simply to get an understanding of the football engine.
