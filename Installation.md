@@ -1,53 +1,92 @@
 
-# December 15th 2020
-Had to install Google Football on my linux (ubuntu 20.04) machine as the windows installation was giving me some issues
-Even with linux installation I ran into an error "No SETUP file exists" after following the step-by-step instructions in the main
-repository.
+# Docker on WSL2 with GPU support
+Windows Subsystems for Linux (WSL) aleviated many problems for users Windows users. WSL2 works seamlessly with Windows 11 and I took advantage of that to restart this project after a long haitus. The advantage is that my windows machine also has an NVIDIA graphics card, albeit not a very hefty one, an MX150, but it is still useful. The WSL2 distributing I am running for this project is Ubuntu 20.04.
 
-Overcame the problem by installing PyGame standalone before running the pip3 install gfootball.
+Furthermore, the framework I chose to use is none other than Docker for fast deployment (if you are familiar with Docker). The official Instructions on how to get started with Google Research Football with docker is hyperlinked here: [Google Research Football Docker Image](https://github.com/google-research/football/blob/master/gfootball/doc/docker.md). There are a couple changes that I tweaked in order to update them, however the main change I made in my setup was the base image used to have an docker image that can be run with a GPU.
 
-# December 18th 2020
-Running the command to start the game as instructed
+## Requirements
+Couple of great videos and resources that can help in getting your computer set-up.
+
+[Install WSL2 on Windows 11 with NVIDIA CUDA 11.8](https://www.youtube.com/watch?v=1HzYU2_t3yc)
+
+[Install WSL2 on Windows 11 with NVIDIA GPU and Docker Support](https://www.youtube.com/watch?v=CO43b6XWHNI&t=10s)
+
+## Build
+
+Got a base image from [NVIDIA NGC](https://catalog.ngc.nvidia.com/containers), main reason is because their images come configured to run on host systems with NVIDIA Drivers. So long as you are able to find the right base image that has the same driver version as your host, the next thing is to make sure it meets the software package requirements, in this case Tensorflow version 1.15. 
+
+```console
+docker build --build-arg DOCKER_BASE=nvcr.io/nvidia/tensorflow:20.02-tf1-py3 . -t gfootball
+```
+
+## Docker run
+The other difference between the official setup and mine is that more recently, the easiest way to run GUI apps through Docker and or WSL is using X11 Forwarding on Windows or Linux.
+
+* [How to Use X11 Forwarding on Windows or Linux](https://www.youtube.com/watch?v=FlHVuA_98SA)
+
+* [Xming Download](https://sourceforge.net/projects/xming/)
+
+* [Using the Xming X server to display graphical programs](https://docs.vscentrum.be/access/using_the_xming_x_server_to_display_graphical_programs.html)
+
+
+```console
+export DISPLAY=:0
+
+sudo docker run --gpus all -e DISPLAY=$DISPLAY -it -v /tmp/.X11-unix:/tmp/.X11-unix:rw gfootball bash
+```
+
+## Running the command to start the game as instructed
+Once you are inside the container, launching the environment should be very simple.
 
 ```console
 python3 -m gfootball.play_game --action_set=full
 ```
-Indeed worked well but I had fears of version issues. I googled the previously indicated 'No SETUP file exists' and it had to do with pygame not working well with python3 versions other than 3.6. Therefore deleted my initial installation and went with the docker installation in a virtual environment instead and everything is working fine.
 
-**Instructions on how to install with docker linked here:** [Google Research Football Docker Image](https://github.com/google-research/football/blob/master/gfootball/doc/docker.md).
+# Docker Tips/Instructions
+Although this repository is not a course on Docker, I thought it would be useful to have a few hints and tips that would help get up and started and use Docker well enough since some people might not be familiar with Docker.
+So a docker image is essentially the application that you want to run, in this case "gfootball". Any containers would be instances of the image.
 
-### Used the Non GPU installation
+In order to quit the container simply run the exit command
+Type in the following command to see the container ID
 
 ```console
-docker build --build-arg DOCKER_BASE=ubuntu:20.04 . -t gfootball
+sudo docker ps -a
+```
+The above command lists all containers in the given format
+
+| CONTAINER ID | IMAGE     | COMMAND     | CREATED        | STATUS                       | PORTS | NAMES         |
+|--------------|-----------|-------------|----------------|------------------------------|-------|---------------|
+| [GIVEN ID]   | gfootball | "/bin/bash" | [time created] | how long it has been running |       | [random name] |
+
+
+You can also see your container ID while you are in the container itself
+```console
+root@container_id
 ```
 
-# June 7th 2021
-Wanted to work on this again, I think the fact that it was during the holiday season and had a lot going on distracted me from the project.
-Also installed Ubuntu 20.04 on an SSD from which I could boot from on my regular computer which happens to have a gpu.
-Therefore re-installed the docker with the following command.
-My default installation will have a tensorflow base and called **gfootball** while the non-gpu version will be called **gfootball_nogpu**.
-
-### GPU Installation
-
+If you want to stop the container
 ```console
-docker build --build-arg DOCKER_BASE=tensorflow/tensorflow:1.15.2-gpu-py3 . -t gfootball
+sudo docker stop [conainter_id]
 ```
 
-## Docker run
-
+**starting existing container**
+This step is important that many people might get stuck on and might have to create many containers over and over again.
+The *docker run* command creates new containers so once you did the initial container you should not run it again.
+Instead use the command below and make sure to put the *-i* flag for interactive mode.
+This will save you a lot of hassle and time.
+Make sure to go into the same container as a new container will be completely blank and any files created will not be tracked.
 ```console
-sudo docker run --device /dev/dri/card0 --device /dev/dri/renderD128 -e DISPLAY=$DISPLAY -it -v /tmp/.X11-unix:/tmp/.X11-unix:rw gfootball bash
+sudo docker start [conainter_id] -i
 ```
 
-Using the gpu version gave me the following warning
+## File Management
 
+**Copy Files from host to container**
 ```console
-WARNING: You are running this container as root, which can cause new files in
-mounted volumes to be created as the root user on your host machine.
+docker cp /host/destination/folder [container_id]:/path/to/file 
+```
 
-To avoid this, run the container by specifying your user's userid:
-
-$ docker run -u $(id -u):$(id -g) args
-
+**Copy Files from container to host**
+```console
+docker cp  [container_id]:/path/to/file /host/destination/folder
 ```
