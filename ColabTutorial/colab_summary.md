@@ -10,9 +10,12 @@ Full Script Below:
 
 ```python
 import gfootball.env as football_env
+
 env = football_env.create_environment(env_name="academy_empty_goal_close", stacked=False, logdir='/tmp/football', write_goal_dumps=False, write_full_episode_dumps=False, render=False)
 env.reset()
+
 steps = 0
+
 while True:
   obs, rew, done, info = env.step(env.action_space.sample())
   steps += 1
@@ -24,8 +27,7 @@ while True:
 print("Steps: %d Reward: %.2f" % (steps, rew))
 ```
 
-The most notable argument here is the env_name, it is set to "academy_empty_goal_close".
-The pygame GUI does is not rendered by default since the quick start colab notebook does not will not.
+The most notable argument here is the env_name, it is set to "academy_empty_goal_close". The pygame GUI does is not rendered since the quick start colab notebook is unable to.
 
 # December 20th 
 
@@ -53,8 +55,7 @@ It only seems that rewards are given to the agent are a fuction of the steps tak
 (Probably the wrong conclusion). Most likely just means the agent was able to score quickly and if it takes a while, then most likely a defender was able to get to take the ball away.
 
 ## Trial #3
-Changed to log directory to the current directory to make it faster to find
-Added the following (before the env variable declaration):
+Changed to log steps and rewards to a log directory and make it easier to see the results of a training episode:
 
 ```python
 import os
@@ -129,7 +130,7 @@ Full Doc at Link: [pyautogui-screenshot function](https://pyautogui.readthedocs.
 
 Lastly Started writing the output on a csv file including printing to console.
 
-From what I am seeing is that after rendering the game is that the player takes a random action and it either goes forward into the goal **resulting in a reward of 1** or backwards and gets the ball taken away by defenders **resulting in a reward of 0**. The number of steps simply depends on how detremental the first action/ direction the player took until the player gets the ball taken away or scores.
+From what I am seeing after rendering the game is that the player takes a random action and it either goes forward into the goal **resulting in a reward of 1** or backwards and gets the ball taken away by defenders **resulting in a reward of 0**. The number of steps simply depends on how detremental the first action/ direction the player took until the player gets the ball taken away or scores.
 
 Note: Will have to edit the file in order to have a better naming convention for the screenshots. I think this is a typical linux problem.
 
@@ -264,7 +265,10 @@ The result was the agent going the complete other direction in a straight line a
 
 ![](trial9_logs/screenshots/00m44s.png)
 
-Complete code for the take_screenshot file just for the record.
+
+Added functionality to be able to take screenshots that used pyautogui's _.screenshot_ method. This is to be able to show results on this notebook of actions taken by the agents.
+Full Doc at Link: [pyautogui-screenshot function](https://pyautogui.readthedocs.io/en/latest/screenshot.html)
+snippet:
 
 ```python
 import pyautogui
@@ -281,8 +285,7 @@ def take_amount_screenshots(num_screenshots, step_num, output_path):
 
 ## Trial #10
 
-This is the last trial I will be attempting with the started Colab Notebook. Because by now it is very very far away from being the original file.
-I will be creating other directories with desciptive log such as this one as I run various experiments.
+This is the last trial I will be attempting with the started Colab Notebook. Because by now it is very very far away from being the original file. I will be creating other directories with desciptive log such as this one as I run various experiments.
 
 ## NOtes
 Action 5 is the action that makes Alan Turing dribble directly into the goal.

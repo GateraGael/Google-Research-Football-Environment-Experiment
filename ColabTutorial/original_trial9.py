@@ -1,6 +1,5 @@
 import gfootball.env as football_env
 import os
-import take_screenshot
 import sys
 
 log_dir_tutorial = 'tutorial_logs' + '/'

@@ -3,7 +3,6 @@
 ![](https://www.androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?src=https%3A%2F%2Fwww.androidpolice.com%2Fwp-content%2Fuploads%2F2018%2F05%2Fgoogle-ai-hero.png&w=728)
 
 
-
 # Table of contents
 1. [Introduction](#introduction)
     1. [Installation](#Installation)
@@ -18,13 +17,7 @@ see how to make table of contents in markdown: https://stackoverflow.com/questio
 -->
 ## Introduction <a name="introduction"></a>
 
-In this repository, I will be Experimenting with Google Research Football Environment.
-Football has been a passion of mine since I can remember, it is fantastic that I can use a passion of mine to continue learning about my field of study.
-
-Having had the chance to actually play the sport at a semi-professional level maybe I can provide some unprecedented insight and help train the models.
-
-Created a function that takes screenshots from that used pyautogui's _.screenshot_
-Full Doc at Link: [pyautogui-screenshot function](https://pyautogui.readthedocs.io/en/latest/screenshot.html)
+In this repository, I will be experimenting with Google Research Football Environment. Football (soccer) has been a passion of mine since I can remember. It is fantastic that I can use a passion of mine to continue learning about my field of study.
 
 Published paper linked here: [Google Research Football: A Novel Reinforcement Learning Environment](https://arxiv.org/pdf/1907.11180.pdf).
 
@@ -41,7 +34,7 @@ After struggling with the different installation instructions. The docker image 
 ### Test with Colab Notebook<a name="ColabNotebook"></a>
 
 Using the following link: [Tutorial Colab Notebook!](https://colab.research.google.com/github/google-research/football/blob/master/gfootball/colabs/gfootball_example_from_prebuild.ipynb) 
-Honnestly does not teach much. Not sure it was inteded to teach anything or simply as a quickstart. Created a directory titled "ColabTutorial" where I will be running the above notebook as .py files. Please refer to the readme file titled "Colab_summary.md" hyperlinked: [Colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) in which I basically logged all my trials.
+Honnestly does not teach much. Not sure it was inteded to teach anything or simply as a quickstart. Created a directory titled "ColabTutorial" where I will be running the above notebook as .py files. Please refer to the readme file titled "Colab_summary.md" hyperlinked: [colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) in which I basically logged all my trials.
 
 <!--
 ## Some paragraph <a name="paragraph1"></a>
@@ -55,12 +48,11 @@ The second paragraph text
 
 -->
 
-
 # December 24th 2020
-On Decmber 23rd, I ran different trials with the given started tutorial notebook to get a reward, some of them had a reward, while some other did not.
+On Decmber 23rd, I ran different trials with the getting started tutorial notebook to get a reward, some of them had a reward, while some other did not.
 Therefore wanted to get a more thorough understanding of what was going on in the background.
 
-Please see folder [Colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) file for an overview of my trials.
+Please see folder [colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) file for an overview of my trials.
 
 Also have been refering to the the actual paper in order to get better insight into the environments, variables and actions the agents take.
 

@@ -1,6 +1,5 @@
 import gfootball.env as football_env
 import os
-import take_screenshot
 
 
 log_dir_tutorial = 'tutorial_logs' + '/'
@@ -28,7 +27,6 @@ while True:
     if steps % 10 == 0:
         StepsVreward_log.append(f"{steps}, {rew}, {obs}, {done}, {info} \n")
         print("Step: %d Reward: %f Observation: %s Done: %s Info: %s" %(steps, rew, obs, done, info))
-        take_screenshot.take_amount_screenshots(number_of_screenshots, steps, screenshots_dir)
     if done:
         break
 

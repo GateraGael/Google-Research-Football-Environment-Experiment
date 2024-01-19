@@ -2,7 +2,7 @@
 # Docker on WSL2 with GPU support
 Windows Subsystems for Linux (WSL) aleviated many problems for users Windows users. WSL2 works seamlessly with Windows 11 and I took advantage of that to restart this project after a long haitus. The advantage is that my windows machine also has an NVIDIA graphics card, albeit not a very hefty one, an MX150, but it is still useful. The WSL2 distributing I am running for this project is Ubuntu 20.04.
 
-Furthermore, the framework I chose to use is none other than Docker for fast deployment (if you are familiar with Docker). The official Instructions on how to get started with Google Research Football with docker is hyperlinked here: [Google Research Football Docker Image](https://github.com/google-research/football/blob/master/gfootball/doc/docker.md). There are a couple changes that I tweaked in order to update them, however the main change I made in my setup was the base image used to have an docker image that can be run with a GPU.
+Furthermore, the framework I chose to use is none other than Docker for fast deployment (if you are familiar with Docker). The official Instructions on how to get started with Google Research Football with docker is hyperlinked here: [Google Research Football Docker Image](https://github.com/google-research/football/blob/master/gfootball/doc/docker.md). There are a couple changes that I made in order to get my image to run smoothly. The main change I made in my setup was the base image used to have an docker image that can be run with a GPU and the correct tensorflow version, also added command to run the image as a container and being able to render it via X11.
 
 ## Requirements
 Couple of great videos and resources that can help in getting your computer set-up.
@@ -13,9 +13,22 @@ Couple of great videos and resources that can help in getting your computer set-
 
 ## Build
 
-Got a base image from [NVIDIA NGC](https://catalog.ngc.nvidia.com/containers), main reason is because their images come configured to run on host systems with NVIDIA Drivers. So long as you are able to find the right base image that has the same driver version as your host, the next thing is to make sure it meets the software package requirements, in this case Tensorflow version 1.15. 
+Used a base image from [NVIDIA NGC](https://catalog.ngc.nvidia.com/containers), main reason is because their images come configured to run on host systems with NVIDIA Drivers. So long as you are able to find the right base image that has the same driver version as your host, the next thing is to make sure it meets the software package requirements, in this case Tensorflow version 1.15. 
+
+My recommendation is that if you are running your own tests as I am doing here is that the original google football repository gets cloded in a root directory next to your own. You don't have to include the original repo inside your own as it is quite big and most of the files are unecessary. For example:
 
 ```console
+/root_directory$ tree
+.
+├── football
+└── your_experimentation_repo
+
+### proceed to build with the original docker image
+
+git clone https://github.com/google-research/football.git
+
+cd football
+
 docker build --build-arg DOCKER_BASE=nvcr.io/nvidia/tensorflow:20.02-tf1-py3 . -t gfootball
 ```
 
@@ -29,10 +42,12 @@ The other difference between the official setup and mine is that more recently, 
 * [Using the Xming X server to display graphical programs](https://docs.vscentrum.be/access/using_the_xming_x_server_to_display_graphical_programs.html)
 
 
+As mentioned above the best thing to do is separate the original repository and your github experiment repo. While in the root directory that has both of them as subdirectory, the best thing to do is bing mount your experimental repository to the runninng container.
+
 ```console
 export DISPLAY=:0
 
-sudo docker run --gpus all -e DISPLAY=$DISPLAY -it -v /tmp/.X11-unix:/tmp/.X11-unix:rw gfootball bash
+docker run --gpus all -e DISPLAY=$DISPLAY -it -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v ./your_experimentation_repo:/workspace gfootball_gpu bash
 ```
 
 ## Running the command to start the game as instructed
