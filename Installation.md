@@ -48,6 +48,11 @@ As mentioned above the best thing to do is separate the original repository and 
 export DISPLAY=:0
 
 docker run --gpus all -e DISPLAY=$DISPLAY -it -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v ./your_experimentation_repo:/workspace gfootball_gpu bash
+
+###If you named your repo exactly as mine
+
+docker run --gpus all -e DISPLAY=$DISPLAY -it -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v ./Google-Research-Football-Environment-Experiment:/workspace gfootball_gpu bash
+
 ```
 
 ## Running the command to start the game as instructed
