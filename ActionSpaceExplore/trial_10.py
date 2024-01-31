@@ -20,7 +20,7 @@ all_rewards = []
 
 steps = 0 
 while True:
-    action_num = [5]
+    action_num = [16]
 
     obs, rew, done, info = env.step(env.action_space.np_random.choice(action_num,1))
     steps += 1

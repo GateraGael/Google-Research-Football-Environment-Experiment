@@ -1,12 +1,11 @@
-# December 20th
-Experimenting with the given quick start colab notebook, changed the format to .py files instead of .ipynb files for easier testing.
+# Summary
+Experimented with the given quick start colab notebook, took the chunck of code that was in the colab notebook and put it into a python script.
+Then started input different numbers in the env.action_space.np_random.choice(action_num,1) function in order to visualize the output of each action available to the agent.
 
-## Original.py
-The first file that I used is called **original.py**
-This file is the first and only cell in the sample notebook after the installation cell.
-I ran without any changes at all.
+## Original
+The first file that I used is called **original.py**. This file is the first and only cell in the sample notebook after the installation cell. At first, I ran without any changes at all. Then I addded functionality to create reward graphs.
 
-Full Script Below:
+Main loop below:
 
 ```python
 import gfootball.env as football_env
@@ -27,9 +26,8 @@ while True:
 print("Steps: %d Reward: %.2f" % (steps, rew))
 ```
 
-The most notable argument here is the env_name, it is set to "academy_empty_goal_close". The pygame GUI does is not rendered since the quick start colab notebook is unable to.
+The most notable argument here is the env_name, it is set to "academy_empty_goal_close". Looking at the documentation, this is described as following: "Our player starts inside the box with the ball, and needs to score against an empty goal."
 
-# December 20th 
 
 ```console
 python3 original.py
@@ -40,8 +38,6 @@ python3 original.py
 Steps: 85 Reward: 0.00
 ```
 
-# December 23rd
-No Changes made to **original.py**
 
 ## Trial #2
 
@@ -73,10 +69,6 @@ Step 100 Reward: 0.0000
 Steps: 139 Reward: 0.00
 ```
 
-Notice how after there is a print after the 100th step.
-Also the conclusion made earlier that the more steps taken the reward is less still holds.
-
-# December 24th
 
 ## Trial #4
 Changed to print every 5 steps (first if statement in the while loop)
@@ -119,26 +111,20 @@ Step 120 Reward: 0.000000
 Steps: 121 Reward: 0.00
 ```
 
-As we can see my assumptions are completely wrong so far therefore will need more experimentation to understand what is behind the increase/ decrease in rewards.
-In other words, what causes the agents to be rewarded/ re-enforced.
-
 ## Trial #5
 Made major changes to the original file.
 First and foremost I wanted to render to game in order to see what was going on.
-Also added a function that takes screenshots using pyautogui's _.screenshot_ function
+Also added a function that takes screenshots using pyautogui's _.screenshot_ function.
 Full Doc at Link: [pyautogui-screenshot function](https://pyautogui.readthedocs.io/en/latest/screenshot.html)
 
-Lastly Started writing the output on a csv file including printing to console.
 
 From what I am seeing after rendering the game is that the player takes a random action and it either goes forward into the goal **resulting in a reward of 1** or backwards and gets the ball taken away by defenders **resulting in a reward of 0**. The number of steps simply depends on how detremental the first action/ direction the player took until the player gets the ball taken away or scores.
 
-Note: Will have to edit the file in order to have a better naming convention for the screenshots. I think this is a typical linux problem.
 
 ## Trial #6
-The fist changes that I made to code for trial_5 is that instead of naming the screenshots per number I simply imported the time module and will name each by minute:seconds after the script started running. These changes were made in the _take\_screenshot.py_ script.
+The fist changes that I made to code for trial_5 is that instead of naming the screenshots per number, I simply imported the time module and will name each by minute:seconds after the script started running. These changes were made in the _take\_screenshot.py_ script.
 
-As I looked at the script, I saw that un-used variables obs and info and wondered what they represent.
-Therefore also printed them to the terminal and csv file just to see.
+As I looked at the script, I saw that un-used variables obs and info and wondered what they represent. Therefore also printed them to the terminal and put them into a csv file just to see.
 
 Results: The observation looks a 3D numpy array. Will just print the shape for the next trial and maybe have it in it's own csv file.
 
@@ -147,7 +133,6 @@ First I printed the shape of the array and it was:
 ```output_stdout
 (72, 96, 4)
 ```
-I Just won't output it not put it into it's own csv file until I know what it is.
 
 ## Trial #8
 
@@ -239,14 +224,10 @@ The results of the code implementation and screenshots can be see in the [trial8
 
 It can be confirmed that the action *0* corresponds to no action at all. Giving time to the oppostion to actually pick up the ball and throw it out for a corner kick which is very weird !
 
-![](trial8_logs/screenshots/15m49.png)
-
-Did not get a chance to take the screenshot of when the player named "Meitner" throws the ball away. But believe me he does you have my code in this repo.
-Just realized the naming convention for the screenshots are not what I wanted so will change the take_screenshot script.
 
 ## Trial #9
 
-Since the documentation states that RandomState.choice(a, size=None, replace=True, p=None)
+Since the documentation states that RandomState.choice(a, size=None, replace=True, p=None).
 Generates a random sample from a given 1-D array
 
 Parameters:	
@@ -261,12 +242,7 @@ while True:
     obs, rew, done, info = env.step(env.action_space.np_random.choice(action_num,1))
 ```
 
-The result was the agent going the complete other direction in a straight line and getting his ball taken away.
-
-![](trial9_logs/screenshots/00m44s.png)
-
-
-Added functionality to be able to take screenshots that used pyautogui's _.screenshot_ method. This is to be able to show results on this notebook of actions taken by the agents.
+The result was the agent going the complete other direction in a straight line and getting his ball taken away. Next, I added functionality to be able to take screenshots that used pyautogui's _.screenshot_ method. This is to be able to show results on this notebook of actions taken by the agents.
 Full Doc at Link: [pyautogui-screenshot function](https://pyautogui.readthedocs.io/en/latest/screenshot.html)
 snippet:
 
@@ -293,8 +269,4 @@ Action 5 is the action that makes Alan Turing dribble directly into the goal.
 ```python
 action_num = [5]
 ```
-
-![](trial10_logs/screenshots/00m40s.png)
-
-
 
