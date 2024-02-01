@@ -34,7 +34,9 @@ After struggling with the different installation instructions. The docker image 
 ### Test with Colab Notebook<a name="ColabNotebook"></a>
 
 Using the following link: [Tutorial Colab Notebook!](https://colab.research.google.com/github/google-research/football/blob/master/gfootball/colabs/gfootball_example_from_prebuild.ipynb) 
-Honnestly does not teach much. Not sure it was inteded to teach anything or simply as a quickstart. Created a directory titled "ColabTutorial" where I will be running the above notebook as .py files. Please refer to the readme file titled "Colab_summary.md" hyperlinked: [colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) in which I basically logged all my trials.
+Honnestly does not teach much. Not sure it was inteded to teach anything or simply as a quickstart. Created a directory titled "ColabTutorial" where I will be running the above notebook as .py files. 
+
+Please see following markdown [summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ActionSpaceExplore/summary.md) file for an overview of my trials.
 
 <!--
 ## Some paragraph <a name="paragraph1"></a>
@@ -45,23 +47,11 @@ This is a sub paragraph, formatted in heading 3 style
 
 ## Another paragraph <a name="paragraph2"></a>
 The second paragraph text
-
 -->
 
-# December 24th 2020
-On Decmber 23rd, I ran different trials with the getting started tutorial notebook to get a reward, some of them had a reward, while some other did not.
-Therefore wanted to get a more thorough understanding of what was going on in the background.
+# First Steps
 
-Please see folder [colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) file for an overview of my trials.
+Ran different trials with the getting started tutorial notebook to get a reward, some of them had a reward, while some other did not. Therefore wanted to get a more thorough understanding of what was going on in the background.
 
-Also have been refering to the the actual paper in order to get better insight into the environments, variables and actions the agents take.
-
-Page 4 of the resarch paper explains that the football engine rewards the team or agent when a goal is scored (+1) and rewards a (-1) when a goal is scored against. Therefore only my Trial #2 successfully scored a goal while all the other attemps had the ball taken away.
-At Trial #10 I was able to make our agent Alan Turing dribble directly into the goal.
-Unfortunately no A.I. yet, simply needed to do this to get an understanding of the football engine.
-
-![](ColabTutorial/trial10_logs/screenshots/00m40s.png)
-
-
-
+Also have been refering to the the actual paper in order to get better insight into the environments, variables and actions the agents take. Page 4 of the resarch paper explains that the football engine rewards the team or agent when a goal is scored (+1) and rewards a (-1) when a goal is scored against.
 

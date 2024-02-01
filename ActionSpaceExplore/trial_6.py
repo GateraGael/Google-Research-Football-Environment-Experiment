@@ -18,19 +18,31 @@ env.reset()
 all_steps = []
 all_rewards = []
 info_list = []
+observation_list = []
 
 steps = 0 
 while True:
     obs, rew, done, info = env.step(env.action_space.sample())
+
     steps += 1
     if steps % 1 == 0:
         all_steps.append(int(steps))
         all_rewards.append(float(rew))
         info_list.append(info)
-        print("Step: %d Reward: %f Observation: %s Done: %s Info: %s" %(steps, rew, obs, done, info))
+        observation_list.append(obs)
+        print("Step %d Reward: %f" %(steps, rew))
+        #print("Step: %d Reward: %f Observation: %s Done: %s Info: %s" %(steps, rew, obs, done, info))
     if done:
         break
 
+print(f"Observation Object Type {type(observation_list[0])}")
+print(f"Observation Shape {observation_list[0].shape}")
+
+print(f"Info Object Type {type(info_list[0])}")
+print(f"Info Object Type {info_list[0].keys()}")
+print(f"Info 'score_reward' value {info_list[0]['score_reward']}")
+
+print(f"Reward {all_rewards[0]}")
 
 graph_util = GraphingUtils()
 graph_util.plot_and_save_rewards(all_steps, all_rewards, log_dir_tutorial)

@@ -21,12 +21,6 @@ all_rewards = []
 
 steps = 0 
 while True:
-    #print(env.action_space.__dict__.keys())
-    #print(dir(env.action_space))
-    #print(env.action_space.np_random.choice(1,1))
-    #sys.exit()
-    #obs, rew, done, info = env.step(env.action_space.sample())
-
     obs, rew, done, info = env.step(env.action_space.np_random.choice(1,1))
     steps += 1
 
